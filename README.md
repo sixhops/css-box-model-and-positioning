@@ -19,6 +19,8 @@ competencies: Front-end intro
 - Create floating elements to position content removed from the standard document flow
 - Create a page with multicolumn layout
 
+> STP: Altered the order of these objectives to match the lesson flow.
+
 ### Preparation
 *Before this lesson, students should already be able to:*
 
@@ -28,8 +30,9 @@ competencies: Front-end intro
 
 > Note: Solution code for this lesson is built out as the lesson progresses.
 
-## An Intro to The Box Model (5 mins)
+## An Intro to The Box Model (5 mins "I DO")
 
+> STP: Hook/opening goes here...
 
 All HTML elements can be considered boxes. Even if you see a circle, it's living within a box.
 
@@ -37,12 +40,12 @@ The CSS box model describes this principal - a box wraps around all HTML element
 
 With CSS properties and values, it is possible to apply specific styles to each of these elements, and change the way they behave and/or display on the page.
 
-## Box Model Demo - Codealong (5 mins)
+## Box Model Demo - Codealong (5 mins "WE DO")
 
 Let's write some HTML we can come back to and use to visualize what we're talking about.
 
 - Create an new directory called `box-model-work`
-- Create html page called `index.html` with an externally linked css stylesheet called `main.css`
+- Create html page called `index.html` with an externally linked css stylesheet called `style.css`
 - Inside your html page create a "container" div holding four divs within.
 - Inside our CSS page, make the container a 500px gray square containing 100px squares within that are red, blue, green, and black.
 
@@ -102,7 +105,7 @@ How about if we drop this code into our CSS file:
 
 Notice the body, the container, and each of the divs are surrounded by a red border.  Peak at the styles tab on the right and scroll all the way to the bottom.  You'll notice boxes within boxes - madness!
 
-## The Box Model and its components - Intro (10 mins)
+## The Box Model and its components - Intro (10 mins "I DO")
 
 The image below illustrates the box model and what you should have seen in your dev tools:
 
@@ -112,7 +115,6 @@ _From [www.theslate.org](http://www.theslate.org)_
 
 But what do these different layers mean, and how are they relating to one another?
 
-
 * **Margin** - clears an area around the border; the margin does not have a background color, it is completely transparent
 
 * **Border** - a border that goes around the padding and content; the border is affected by the background color of the box
@@ -121,10 +123,9 @@ But what do these different layers mean, and how are they relating to one anothe
 
 * **Content** - The content of the box, where text and images appear
 
-#### Layers of the Box Model - Codealong (15 mins)
+#### Layers of the Box Model - Codealong (15 mins "WE DO")
 
 Let's get go into some more detail and practice with each of these elements of The Box Model.
-
 
 #### Margin
 
@@ -219,8 +220,7 @@ p {
 
 Amazing!  Add those styles to your CSS file.
 
-
-## Taking Up Space using Display - Intro (15 mins)
+## Taking Up Space using Display - Intro (15 mins "I DO")
 
 Cool, right? Each HTML element gets its own box to live in.
 
@@ -237,7 +237,6 @@ We can change all this with the first positioning property we'll learn, the `dis
 * If you assign **none** as the value of the display, this will make the element and its content disappear from the page entirely!
 
 To illustrate this, if we had this HTML:
-
 
 ```html
 <div class="inline">
@@ -282,13 +281,13 @@ We would end up with something like this:
 
 > Note: Explain the styling in this image.
 
-
-## Positioning - Codealong (10 mins)
+## Positioning - Codealong (10 mins "WE DO")
 
 Another CSS property, "position", can take `relative` or `absolute` values, among others.
 
-A page element with "relative positioning" gives you the control to "absolutely position" children elements inside of it. This might not be obvious to everyone - that's probably because this isn't intuitive, at all. Let's look at an example.
+> STP: Move this relative-absolute section to the bottom of "positioning"
 
+A page element with "relative positioning" gives you the control to "absolutely position" children elements inside of it. This might not be obvious to everyone - that's probably because this isn't intuitive, at all. Let's look at an example.
 
 ![css position relative](https://i.imgur.com/LRd7lBy.png)
 
@@ -314,8 +313,7 @@ Declaring `position:relative` allows you to position the element top, bottom, le
     left: 40px;
 }
 ```
-
-
+> STP: Do static first
 
 #### Static Positioning
 
@@ -369,7 +367,7 @@ Specifying `position:absolute` _removes the element from the document_ and place
 }
 ```
 
-
+> STP: Remove this redundant relative section
 
 ##### Relative Positioning
 
@@ -386,7 +384,7 @@ Declaring `position:relative` allows you to position the element top, bottom, le
 }
 ```
 
-## Floats and Clears - Intro (10 min)
+## Floats and Clears - Intro (10 min "I DO")
 
 The float property specifies whether or not a box (or an element) should float; essentially, it determines whether text will be wrapped around the element.
 
@@ -408,7 +406,7 @@ All elements will float next to floated items until they are specifically cleare
 <img src="https://cloud.githubusercontent.com/assets/40461/8234478/287c1156-15d4-11e5-9901-ba9090a5bf70.png">
 </p>
 
-## Using position, floats, and clears to create columns - Code along (20 mins)
+## Using position, floats, and clears to create columns - Code along (20 mins "WE DO")
 
 Now that we have the basics of relative and absolute positioning, lets create a two column layout by changing the heights; then, we'll investigate how to do this with floats and clears for a more effective approach.  
 
