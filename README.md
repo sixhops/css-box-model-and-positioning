@@ -32,13 +32,15 @@ competencies: Front-end intro
 
 ## An Intro to The Box Model (5 mins "I DO")
 
-> STP: Hook/opening goes here...
+> Annotation: Opening/Hook - Frame this introduction as the solution for the problem of having unpositioned, left-aligned content. "So now our problem is that we have our content on the page marked up with our HTML element tags, but it looks terrible. Everything is on the left. There is a ton of wasted space. There's no visual flow. We need a way to move these elements around on the page so that the user has a good experience."
 
 All HTML elements can be considered boxes. Even if you see a circle, it's living within a box.
 
 The CSS box model describes this principal - a box wraps around all HTML elements, and it consists of: margins, borders, padding, and the actual content.  This model allows us to place a border around elements and space elements in relation to other elements.
 
 With CSS properties and values, it is possible to apply specific styles to each of these elements, and change the way they behave and/or display on the page.
+
+> Annotation: Assessment - Fist to Five to check understanding.
 
 ## Box Model Demo - Codealong (5 mins "WE DO")
 
@@ -105,6 +107,8 @@ How about if we drop this code into our CSS file:
 
 Notice the body, the container, and each of the divs are surrounded by a red border.  Peak at the styles tab on the right and scroll all the way to the bottom.  You'll notice boxes within boxes - madness!
 
+> Annotation: Assessment - Ask the class, "Does anybody NOT see the boxes?" Address issues causing this.
+
 ## The Box Model and its components - Intro (10 mins "I DO")
 
 The image below illustrates the box model and what you should have seen in your dev tools:
@@ -122,6 +126,8 @@ But what do these different layers mean, and how are they relating to one anothe
 * **Padding** - clears an area around the content; the space between the content and the border; the padding is affected by the background color of the box
 
 * **Content** - The content of the box, where text and images appear
+
+> Annotation: Assessment - Create groups of 3-4. Have each student choose to be one of Margin, Border, Padding/Content, or Content. Have them stand appropriately representing the layers of the box model.
 
 #### Layers of the Box Model - Codealong (15 mins "WE DO")
 
@@ -163,6 +169,7 @@ div {
   margin: 0 auto;
 }
 ```
+> Annotation: Talking Point - Ask the students, which of the different ways of setting margin value is the most readable and why?
 
 #### Border
 
@@ -218,7 +225,9 @@ p {
 }
 ```
 
-Amazing!  Add those styles to your CSS file.
+Amazing! Add those styles to your CSS file.
+
+> Annotation: Assessment - In the same source files, add some text to each `<div>`. Give all `<div>`s a left margin of 10px and a top margin of 5px. All other margins should be zero. Add padding (however much you like) to `<div>`s 1 and 3. Instructors walk around checking.
 
 ## Taking Up Space using Display - Intro (15 mins "I DO")
 
@@ -228,7 +237,7 @@ As you saw, the outermost box of each element went all the way across the page. 
 
 We can change all this with the first positioning property we'll learn, the `display` property and the four values we can use: inline, block, inline-block, and none.
 
-* An **inline** element has no line break before or after it. This makes the element sit on the same line as another element, but without formatting it like a block. It only takes up as much width as it needs (not the whole line). Inline places all your elements on a single line. The bad news is that it doesn't maintain their "box"ness
+* An **inline** element has no line break before or after it. This makes the element sit on the same line as another element, but without formatting it like a block. It only takes up as much width as it needs (not the whole line). Inline places all your elements on a single line. The bad news is that it doesn't maintain their "box"ness.
 
 * A **block** element has some whitespace above and below it and does not tolerate any HTML elements next to it. This makes the element a block box. It won't let anything sit next to it on the page and takes up the full width.
 
@@ -281,39 +290,11 @@ We would end up with something like this:
 
 > Note: Explain the styling in this image.
 
+> Annotation: Assessment - Instead of me explaining it, have 3 students come up and each explain one section of the styling.
+
 ## Positioning - Codealong (10 mins "WE DO")
 
-Another CSS property, "position", can take `relative` or `absolute` values, among others.
-
-> STP: Move this relative-absolute section to the bottom of "positioning"
-
-A page element with "relative positioning" gives you the control to "absolutely position" children elements inside of it. This might not be obvious to everyone - that's probably because this isn't intuitive, at all. Let's look at an example.
-
-![css position relative](https://i.imgur.com/LRd7lBy.png)
-
-The relative positioning on the parent is what matters here. This what would happen if we forgot that:
-
-![](https://i.imgur.com/0vGcPFL.png)
-
-In this small example, it doesn't seem to matter much, but it really is a significant change.
-
-⇒ The "absolutely positioned" elements are positioning themselves in relation to the body element, instead of their direct parent. So if the browser window grows, that element in the bottom left is going to stick with the browser window, not hang back inside, like it was the case in the previous example.
-
-#### Relative Positioning
-
-Declaring `position:relative` allows you to position the element top, bottom, left, or right relative to where it would normally occur.  Let's add some CSS and see what happens:
-
-```css
-#square1 {
-    background-color: red;
-    height: 100px;
-    width: 100px;
-    position:relative;
-    top: 0;
-    left: 40px;
-}
-```
-> STP: Do static first
+> Annotation: Hook/Opening - Continuation of the Problem-Solution scheme from the beginning. "So we have solved one problem of being able to control how close elements are to each other and we solved another that is whether they can be lined up in a row or whether they take the full width of the page. Now we will look at how to solve the problem of positioning them within the page."
 
 #### Static Positioning
 
@@ -334,6 +315,23 @@ If we revisit our squares from earlier in class:
 
 You rarely explicitly declare `position:static` like this because it is the default.
 
+#### Relative Positioning
+
+Declaring `position:relative` allows you to position the element top, bottom, left, or right relative to where it would normally occur.  Let's add some CSS and see what happens:
+
+```css
+#square1 {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    position:relative;
+    top: 0;
+    left: 40px;
+}
+```
+
+> Annotation: Talking point - Be sure to talk about and demo how this works with negative numbers.
+
 #### Fixed Positioning
 
 An element with fixed position is positioned relative to the browser window.  It will not move even if the window is scrolled, so a fixed positioned element will stay right where it is creating an effect a bit like the old school "frames" days.
@@ -351,7 +349,6 @@ Try it out:
 }
 ```
 
-
 #### Absolute Positioning
 
 Specifying `position:absolute` _removes the element from the document_ and places it exactly where you tell it to be.
@@ -367,22 +364,19 @@ Specifying `position:absolute` _removes the element from the document_ and place
 }
 ```
 
-> STP: Remove this redundant relative section
+A page element with "relative positioning" gives you the control to "absolutely position" children elements inside of it. This might not be obvious to everyone - that's probably because this isn't intuitive, at all. Let's look at an example.
 
-##### Relative Positioning
+![css position relative](https://i.imgur.com/LRd7lBy.png)
 
-Declaring `position:relative` allows you to position the element top, bottom, left, or right relative to where it would normally occur.
+The relative positioning on the parent is what matters here. This what would happen if we forgot that:
 
-```css
-#square1 {
-    background-color: red;
-    height: 100px;
-    width: 100px;
-    position:relative;
-    top: 0;
-    left: 40px;
-}
-```
+![](https://i.imgur.com/0vGcPFL.png)
+
+In this small example, it doesn't seem to matter much, but it really is a significant change.
+
+The "absolutely positioned" elements are positioning themselves in relation to the `<body>` element, instead of their direct parent. So if the browser window grows, that element in the bottom left is going to stick with the browser window, not hang back inside, like it was the case in the previous example.
+
+> Annotation: Assessment - Turn and Talk: Each pair of students chooses one person to talk about 2 of the positioning values and the other person takls about the other two.
 
 ## Floats and Clears - Intro (10 min "I DO")
 
@@ -405,6 +399,8 @@ All elements will float next to floated items until they are specifically cleare
 <p style="text-align: center">
 <img src="https://cloud.githubusercontent.com/assets/40461/8234478/287c1156-15d4-11e5-9901-ba9090a5bf70.png">
 </p>
+
+> Annotation: Assessment - Fist to Five
 
 ## Using position, floats, and clears to create columns - Code along (20 mins "WE DO")
 
@@ -508,9 +504,18 @@ Lets go back to our CSS and change our "square2" div's positioning from float:le
 
 `Clear` is saying "I'm not sure how much space I'm going to take but whatever it is clear off my right side" so our text respects its wishes and drops to the line below.
 
+> Annotation: Assessment - Have the students create a 2-column website.
+
+## Create a two-column website - STUDENT PRACTICE (10 mins "YOU DO")
+
+Create a new html file named columns.html and have it reference an external stylesheet named style.css. In the page create a div that contains a `<div>` and a `<p>`. Make the `<div>` appear on the left and the `<p>` appear next to it on the right using floats. Provide a pleasant margin between the `<div>` and the `<p>`. Put a short, 3-item `<ul>` in the `<div>` and make sure the `<div>` provides padding for the list. Put a few paragraphs of text in the `<p>`.
+
+> Annotation: Activity notes - This ties back into margin and padding and the objectives to be able to create a multi-column page using floats. Students have a degree of freedom to determine how they will achieve the requirements of this assignment.
 
 ## Conclusion (5 mins)
 
 - Compare the elements of The Box Model - margin, border, padding, content.
 - How do floats work with clears to create a multicolumn layout?
 - Compare inline-block, block, and inline.
+
+> Annotation: Closing review - Reiterate what learning objectives they have achieved. Box model properties margin, border, and padding determine spacing around, within, and between elements. Elements can be inline, block, or inline-block which determines whether they can be lined up next to each other or take up the full page width. Position properties Determine where the element appears in the page or parent element. Static is default. Relative allows for adjustment of position based on where it would have been originally. Fixed forces the element to stay bound to the browser window and not to move with scrolling. Absolute allows the element to be placed according to coordinates within its parent container. Using the float property tells other elements that they can flow around the floated element. Elements can be forced to stop flowing around the floated item by using the clear property. And you've created a basic, two-column page. We will be advancing our knowledge of CSS in the next section.
