@@ -145,7 +145,7 @@ Did anyone notice that our floater `<div>`s flowed beyond the height of our `con
 
 This tells the container to do one of two things to deal with overflow. If the container has an explicit height property set, then the container will adhere to the height and add scrollbars to deal with overflow. If no height is set on the container, then the container will expand to encompass the overflow. Try removing the height property now to see the difference.
 
-> Assessment - Walk around viewing students pages
+> Summative Assessment - Walk around viewing students pages and offering feedback.
 
 ## Conclusion (5 mins)
 
