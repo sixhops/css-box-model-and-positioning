@@ -95,7 +95,7 @@ Lines of text usually have a relatively small height so you can see many lines o
 
 Now we will adapt our example code into a responsive image gallery. You have the following requirements:
 
-* Remove the <p> and add nine more <div>s (total of ten) into the container all with the class floater
+* Remove the `<p>` and add nine more `<div>`s (total of ten) into the container all with the class floater
 * Make the container's width full-screen (leave the height alone for now)
 * Add a placeholder image into each `<div>`. You can use http://lorempixel.com to generate random placeholder image using their API which is very simple. To get a 200px by 200px image of a cat, use this URL as your `<img>` src: http://lorempixel.com/200/200/cats.
 * Once the code is written and the page successfully renders, adjust your browser's window width from wide to narrow to see how the floated elements automatically stack and wrap as the page becomes more narrow.
