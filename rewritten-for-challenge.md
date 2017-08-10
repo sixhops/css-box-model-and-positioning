@@ -31,7 +31,7 @@ competencies: Front-end intro
 
 Today, more than half of all web browsing takes place on small, mobile devices. But many other devices, such as tablets, laptops, or HD television monitors still represent a large enough portion of the market that we cannot disregard design for them. The problem of creating a website that can respond or adapt to viewports of varying widths is more important than ever.
 
-We don't want to rewrite the HTML and CSS for every device we need to support so we use techniques that enable our web page to respond, or display itself differently, as the viewport width changes. There are many techniques to solve the many problems of responsive design but one of the most basic and most common is the float and clearfix method which we will now learn.
+We don't want to rewrite the HTML and CSS for every device we need to support so we use techniques that enable our web page to respond, or display itself differently, as the viewport width changes. There are many techniques to solve the many problems of responsive design but one of the most basic and most common is the float method which we will now learn.
 
 > Assessment - Fist to Five
 
